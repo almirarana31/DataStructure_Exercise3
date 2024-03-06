@@ -22,14 +22,15 @@ public class performance {
         System.out.println("Sum of all elements: " + sum);
 
         LinkedList<String> list = new LinkedList<>();
-        long LstartTime = System.currentTimeMillis();
         list.add("Tom");
         list.add("Dick");
         list.add("Harry");
         list.add("Sam");
 
+
+        long LstartTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            list.add(String.valueOf(i));
+            list.remove(i);
         }
 
         long LendTime = System.currentTimeMillis();
@@ -67,15 +68,15 @@ public class performance {
         }
         System.out.println("Sum of all elements: " + sumArray);
 
-        long AstartTime = System.currentTimeMillis();
         ArrayList<String> Alist = new ArrayList<>();
         Alist.add("Tom");
         Alist.add("Dick");
         Alist.add("Harry");
         Alist.add("Sam");
 
+        long AstartTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            Alist.add(String.valueOf(i));
+            Alist.remove(i);
         }
         long AendTime = System.currentTimeMillis();
 
