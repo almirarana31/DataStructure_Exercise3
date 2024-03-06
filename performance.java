@@ -12,7 +12,7 @@ public class performance {
 
         long LstartTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            linkedList.remove(i);
+            linkedList.remove(Integer.valueOf(i));
         }
 
         long LendTime = System.currentTimeMillis();
@@ -67,7 +67,7 @@ public class performance {
 
         System.out.println("Elements of ArrayList: ");
         for (int i : arrayList) {
-            System.out.println(i);
+            System.out.println(Integer.valueOf(i));
         }
 
         int sumArray = 0;
