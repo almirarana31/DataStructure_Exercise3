@@ -10,6 +10,16 @@ public class performance {
         linkedList.add(7);
         linkedList.add(30);
 
+        long LstartTime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            linkedList.remove(i);
+        }
+
+        long LendTime = System.currentTimeMillis();
+
+        long LexTime = LendTime - LstartTime;
+        System.out.println("Linked list execution time: " + LexTime);
+
         System.out.println("Elements of LinkedList: ");
         for (int i : linkedList) {
             System.out.println(i);
@@ -26,17 +36,6 @@ public class performance {
         list.add("Dick");
         list.add("Harry");
         list.add("Sam");
-
-
-        long LstartTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            list.remove(i);
-        }
-
-        long LendTime = System.currentTimeMillis();
-
-        long LexTime = LendTime - LstartTime;
-        System.out.println("Linked list execution time: " + LexTime);
 
         int tomIndex = list.indexOf("Tom");
         int samIndex = list.indexOf("Sam");
@@ -57,6 +56,15 @@ public class performance {
         arrayList.add(7);
         arrayList.add(30);
 
+        long AstartTime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            arrayList.remove(i);
+        }
+        long AendTime = System.currentTimeMillis();
+
+        long AexTime = AendTime - AstartTime;
+        System.out.println("Linked list execution time: " + AexTime);
+
         System.out.println("Elements of ArrayList: ");
         for (int i : arrayList) {
             System.out.println(i);
@@ -73,15 +81,6 @@ public class performance {
         Alist.add("Dick");
         Alist.add("Harry");
         Alist.add("Sam");
-
-        long AstartTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            Alist.remove(i);
-        }
-        long AendTime = System.currentTimeMillis();
-
-        long AexTime = AendTime - AstartTime;
-        System.out.println("Linked list execution time: " + AexTime);
 
         int tomIndex1 = Alist.indexOf("Tom");
         int samIndex1 = Alist.indexOf("Sam");
